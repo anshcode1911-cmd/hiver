@@ -1,0 +1,355 @@
+{
+  "intent_classification": {
+    "accuracy": 0.7,
+    "weighted_f1": 0.6729,
+    "macro_f1": 0.7157,
+    "per_class": {
+      "app_issue": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "battery_performance": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "billing_payment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "connectivity": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "device_troubleshooting": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.571,
+        "support": 2
+      },
+      "feedback_complaint": {
+        "precision": 0.667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 2
+      },
+      "icloud_storage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "other": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 2
+      },
+      "repair_warranty": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "update_installation": {
+        "precision": 1.0,
+        "recall": 0.167,
+        "f1": 0.286,
+        "support": 6
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "confusion_labels": [
+      "app_issue",
+      "battery_performance",
+      "billing_payment",
+      "connectivity",
+      "device_troubleshooting",
+      "feedback_complaint",
+      "icloud_storage",
+      "other",
+      "repair_warranty",
+      "update_installation"
+    ],
+    "classification_report": "                        precision    recall  f1-score   support\n\n             app_issue       1.00      1.00      1.00         3\n   battery_performance       1.00      1.00      1.00         2\n       billing_payment       1.00      1.00      1.00         1\n          connectivity       1.00      1.00      1.00         1\ndevice_troubleshooting       0.40      1.00      0.57         2\n    feedback_complaint       0.67      1.00      0.80         2\n        icloud_storage       1.00      1.00      1.00         1\n                 other       0.50      0.50      0.50         2\n       repair_warranty       0.00      0.00      0.00         0\n   update_installation       1.00      0.17      0.29         6\n\n              accuracy                           0.70        20\n             macro avg       0.76      0.77      0.72        20\n          weighted avg       0.86      0.70      0.67        20\n",
+    "total_samples": 20,
+    "label_distribution": {
+      "billing_payment": 1,
+      "other": 2,
+      "update_installation": 6,
+      "connectivity": 1,
+      "icloud_storage": 1,
+      "battery_performance": 2,
+      "app_issue": 3,
+      "device_troubleshooting": 2,
+      "feedback_complaint": 2
+    }
+  },
+  "escalation": {
+    "accuracy": 0.5,
+    "escalation_precision": 0.1111,
+    "escalation_recall": 0.3333,
+    "escalation_f1": 0.1667,
+    "auto_handle_precision": 0.8182,
+    "auto_handle_recall": 0.5294,
+    "auto_handle_f1": 0.6429,
+    "false_escalation_rate": 0.4706,
+    "missed_escalation_rate": 0.6667,
+    "confusion_matrix": [
+      [
+        9,
+        8
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "confusion_labels": [
+      "auto_handle",
+      "escalate"
+    ],
+    "true_positives": 1,
+    "false_positives": 8,
+    "true_negatives": 9,
+    "false_negatives": 2,
+    "total_samples": 20,
+    "classification_report": "              precision    recall  f1-score   support\n\n auto_handle       0.82      0.53      0.64        17\n    escalate       0.11      0.33      0.17         3\n\n    accuracy                           0.50        20\n   macro avg       0.46      0.43      0.40        20\nweighted avg       0.71      0.50      0.57        20\n"
+  },
+  "reply_quality_automated": {
+    "bleu4_mean": 0.1968,
+    "bleu4_median": 0.0652,
+    "bleu4_std": 0.2617,
+    "rougeL_mean": 0.4264,
+    "rougeL_median": 0.4191,
+    "rougeL_std": 0.2563,
+    "avg_generated_length": 186.1,
+    "avg_reference_length": 120.8,
+    "length_ratio": 1.54,
+    "num_evaluated": 20
+  },
+  "reply_quality_llm_judge": {
+    "avg_overall_score": 4.89,
+    "median_overall_score": 5.0,
+    "std_overall_score": 0.2,
+    "dimension_stats": {
+      "relevance": {
+        "mean": 4.78,
+        "median": 5.0,
+        "std": 0.42,
+        "min": 4,
+        "max": 5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 2,
+          "5": 7
+        }
+      },
+      "grounding": {
+        "mean": 5.0,
+        "median": 5.0,
+        "std": 0.0,
+        "min": 5,
+        "max": 5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 9
+        }
+      },
+      "tone": {
+        "mean": 4.89,
+        "median": 5.0,
+        "std": 0.31,
+        "min": 4,
+        "max": 5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 8
+        }
+      },
+      "actionability": {
+        "mean": 5.0,
+        "median": 5.0,
+        "std": 0.0,
+        "min": 5,
+        "max": 5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 9
+        }
+      },
+      "completeness": {
+        "mean": 4.78,
+        "median": 5.0,
+        "std": 0.42,
+        "min": 4,
+        "max": 5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 2,
+          "5": 7
+        }
+      }
+    },
+    "total_evaluated": 9,
+    "total_errors": 11,
+    "score_distribution": {
+      "excellent (4.5-5.0)": 8,
+      "good (3.5-4.5)": 1,
+      "acceptable (2.5-3.5)": 0,
+      "poor (1.5-2.5)": 0,
+      "bad (1.0-1.5)": 0
+    },
+    "top_issues": []
+  },
+  "headline": {
+    "intent_accuracy": 0.7,
+    "intent_weighted_f1": 0.6729,
+    "escalation_accuracy": 0.5,
+    "missed_escalation_rate": 0.6667,
+    "bleu4": 0.1968,
+    "rougeL": 0.4264,
+    "llm_judge_avg_score": 4.89
+  }
+}

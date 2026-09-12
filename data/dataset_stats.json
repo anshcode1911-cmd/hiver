@@ -1,0 +1,9 @@
+{
+  "total_pairs": 9049,
+  "avg_customer_msg_length": 101.89689468449552,
+  "avg_agent_reply_length": 114.04442479832025,
+  "max_customer_msg_length": 302,
+  "max_agent_reply_length": 279,
+  "pairs_with_context": 39,
+  "unique_threads": 9015
+}

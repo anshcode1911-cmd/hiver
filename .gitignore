@@ -1,0 +1,26 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+*.pyo
+
+# Data (downloaded at runtime)
+data/raw/
+data/apple_support_raw.csv
+data/apple_threads.jsonl
+data/apple_pairs.jsonl
+data/embeddings/
+
+# Results (generated at runtime)
+# (Kept for assignment submission review)
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
